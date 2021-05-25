@@ -23,6 +23,6 @@
 
 
         <!-- fontawesome -->
-    <script src="https://kit.fontawesome.com/bc4d22ac39.js" crossorigin="anonymous"></scrip>
+    <script src="https://kit.fontawesome.com/1c6875637a.js" crossorigin="anonymous"></script>
 </body>
 </html>

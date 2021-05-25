@@ -8,4 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class Product extends Model
 {
     use HasFactory;
+
+    public function getFrenchPrice() {
+
+        $price = $this-> price / 100 ; 
+        
+        return number_format($price , 2 , ',' , ' ' ). '€';
+       
+    }
 }
