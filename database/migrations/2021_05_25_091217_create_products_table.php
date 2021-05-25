@@ -15,10 +15,11 @@ class CreateProductsTable extends Migration
     {
         Schema::create('products', function (Blueprint $table) {
             $table->id();
-            $table->string('title' , 5 , 100);
+            $table->string('title' , 100);
             $table->string('slug')->nullable();
             $table->text('description')->nullable();
-            $table->unsignedDecimal('price', 6, 2);
+          //$table->unsignedDecimal('price', 6, 2);
+            $table->integer('price');
             $table->enum('size' , [
                 'XS',
                 'S',
@@ -30,7 +31,7 @@ class CreateProductsTable extends Migration
             $table->boolean('published')->default(false);
             $table->boolean('state')->default(false);
             $table->string('reference', 16);
-            $table->unsignedInteger('category_id');
+            //$table->unsignedInteger('category_id');*/
             $table->timestamps();
         });
     }

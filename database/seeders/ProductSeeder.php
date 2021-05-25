@@ -19,19 +19,19 @@ class ProductSeeder extends Seeder
         //
                //instancier faker 
         $faker = Factory::create();
-        dd($faker);
        
         for( $i = 0 ; $i < 80 ; $i++) {
             Product::create (
                 [
-                    'title' => $faker->sentence() ,
+                     'title' => $faker->sentence() ,
                     'description' => $faker->text(),
-                    'price'=> $faker->numberBetween(15,300) * 100,
+                    'price'=> $faker->numberBetween(15,300),
                     'size' => $faker->randomElement(['XS','S','M','L','XL']),
                     'image'=>'https://picsum.photos/200',
                     'published'=>$faker->boolean(),
                     'state'=>$faker->boolean(),
-                    'reference'=>$faker->alphaNumeric(16),
+                    'reference'=>$faker->numberBetween(1,16),
+                     //'reference'=>$faker->sentence(),
                 ]);
         } 
     }
