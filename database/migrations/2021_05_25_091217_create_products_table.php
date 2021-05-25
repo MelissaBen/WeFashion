@@ -19,8 +19,15 @@ class CreateProductsTable extends Migration
             $table->string('slug')->nullable();
             $table->text('description')->nullable();
             $table->unsignedDecimal('price', 6, 2);
-            $table->boolean('published');
-            $table->boolean('discount');
+            $table->enum('size' , [
+                'XL',
+                'L',
+                'M',
+                'S',
+                'XS',
+            ])->default('M');
+            $table->boolean('published')->default(false);
+            $table->boolean('state')->default(false);
             $table->string('reference', 16);
             $table->timestamps();
         });
