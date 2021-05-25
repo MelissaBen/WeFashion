@@ -29,6 +29,7 @@ class CreateProductsTable extends Migration
             $table->boolean('published')->default(false);
             $table->boolean('state')->default(false);
             $table->string('reference', 16);
+            $table->unsignedInteger('category_id');
             $table->timestamps();
         });
     }
