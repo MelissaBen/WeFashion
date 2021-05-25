@@ -23,9 +23,10 @@ class ProductSeeder extends Seeder
         for( $i = 0 ; $i < 80 ; $i++) {
             Product::create (
                 [
-                     'title' => $faker->sentence() ,
+                    'title' => $faker->sentence() ,
+                    'slug' => $faker->slug ,
                     'description' => $faker->text(),
-                    'price'=> $faker->numberBetween(15,300),
+                    'price'=> $faker->numberBetween(15,300)*100,
                     'size' => $faker->randomElement(['XS','S','M','L','XL']),
                     'image'=>'https://picsum.photos/200',
                     'published'=>$faker->boolean(),

@@ -19,4 +19,6 @@ Route::get('/', function () {
     return view('welcome');
 });*/
 Route::get('/', [MainController::class , 'home'])->name('home');
+Route::get('/products', [MainController::class , 'index'])->name('products');
+
 
