@@ -20,12 +20,13 @@ class CreateProductsTable extends Migration
             $table->text('description')->nullable();
             $table->unsignedDecimal('price', 6, 2);
             $table->enum('size' , [
-                'XL',
-                'L',
-                'M',
-                'S',
                 'XS',
+                'S',
+                'M',
+                'L',
+                'XL',
             ])->default('M');
+            $table->string('image');
             $table->boolean('published')->default(false);
             $table->boolean('state')->default(false);
             $table->string('reference', 16);
