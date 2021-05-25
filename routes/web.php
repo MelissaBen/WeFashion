@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MainController;
+use App\Http\Controllers\ProductsController;
 
 
 /*
@@ -20,6 +21,8 @@ Route::get('/', function () {
 });*/
 Route::get('/', [MainController::class , 'home'])->name('home');
 Route::get('/products', [MainController::class , 'index'])->name('products');
+Route::get('/admin/products', [ProductsController::class , 'index']);
+
 
 
 
