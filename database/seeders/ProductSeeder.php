@@ -28,13 +28,13 @@ class ProductSeeder extends Seeder
                     'description' => $faker->text(),
                     'price'=> $faker->numberBetween(15,300)*100,
                     'size' => $faker->randomElement(['XS','S','M','L','XL']),
-                    'image'=>'https://picsum.photos/200',
+                    'image' => 'https://placeimg.com/200/200/any?' . rand(1, 100),
                     'published'=>$faker->boolean(),
                     'state'=>$faker->boolean(),
                     'reference'=>$faker->numberBetween(1,16),
                      //'reference'=>$faker->sentence(),
                 ])->categories()->attach([
-                rand(1, 2),            ]);
+                rand(1, 2),]);
         } 
     }
 }
