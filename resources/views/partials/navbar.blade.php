@@ -19,12 +19,12 @@
                  <li class="nav-item active">
                    <a class="nav-link " aria-current="page" href="{{route('products')}}">Produits</a>
                  </li>
-                 <li class="nav-item">
-                   <a class="nav-link " aria-current="page" href="{{route('products')}}">homme</a>
+                @foreach (App\Models\Category::all() as $category)
+                <li class="nav-item active">
+                  <a class="nav-link" href="{{ route('products', ['categorie' => $category->slug]) }}">{{ $category->name }}</a>
                  </li>
-                 <li class="nav-item">
-                   <a class="nav-link " aria-current="page" href="{{route('products')}}">femme</a>
-                 </li>
+                @endforeach
+                
               </ul>
               <ul class="navbar-nav ml-auto">
                   @if (Auth::user())
