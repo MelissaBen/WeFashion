@@ -15,7 +15,7 @@ class ProductsController extends Controller
     public function index()
     {
         $products = Product::paginate(6) ;
-        return view('admin.index' , [
+        return view('admin.products.index' , [
             'products' => $products 
         ]);
     }
@@ -27,7 +27,7 @@ class ProductsController extends Controller
      */
     public function create()
     {
-        return view('admin.create');
+        return view('admin.products.create');
     }
 
     /**
