@@ -23,7 +23,7 @@ Route::get('/', [MainController::class , 'index'])->name('home');
 Route::get('/products', [MainController::class , 'index'])->name('products');
 Route::get('/admin', [ProductsController::class , 'index'])->middleware('admin')->name('admin');
 Route::get('/admin/create', [ProductsController::class , 'create'])->middleware('admin')->name('admin.create');
-Route::get('/admin/product/{product}/edit', [ProductsController::class , 'edit'])->middleware('admin')->name('admin.article.edit');
+Route::get('/admin/product/{product}/edit', [ProductsController::class , 'edit'])->middleware('admin')->name('admin.product.edit');
 
 
 
