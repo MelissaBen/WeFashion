@@ -82,20 +82,21 @@ class ProductsController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-     /*
-    public function destroy($id)
-    {
-        //
-        $product = Product::find($id);
-        $product->delete();
-        return redirect('/');
-    }
-*/
     
-    public function delete(Product $product) {
-         
-       dd($product);
+    public function destroy(Product $product)
+    
+    {
        $product->delete();
        return redirect()->route('admin')->with('success' , "l'article a bien été supprimé");
     }
+
+    
+
+    /*
+    public function delete(Product $product) {
+         
+        $product->delete();
+       return redirect()->route('admin')->with('success' , "l'article a bien été supprimé");
+    }
+    */
 }
