@@ -33,7 +33,8 @@ class ProductSeeder extends Seeder
                     'state'=>$faker->boolean(),
                     'reference'=>$faker->numberBetween(1,16),
                      //'reference'=>$faker->sentence(),
-                ]);
+                ])->categories()->attach([
+                rand(1, 2),            ]);
         } 
     }
 }
