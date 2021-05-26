@@ -19,7 +19,7 @@ use App\Http\Controllers\ProductsController;
 Route::get('/', function () {
     return view('welcome');
 });*/
-Route::get('/', [MainController::class , 'home'])->name('home');
+Route::get('/', [MainController::class , 'index'])->name('home');
 Route::get('/products', [MainController::class , 'index'])->name('products');
 Route::get('/admin', [ProductsController::class , 'index'])->middleware('admin')->name('products.index');
 

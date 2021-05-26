@@ -17,7 +17,7 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                  <li class="nav-item active">
-                   <a class="nav-link " aria-current="page" href="{{route('products')}}">Produits</a>
+                   <a class="nav-link " aria-current="page" href="{{route('products')}}">Soldes</a>
                  </li>
                 @foreach (App\Models\Category::all() as $category)
                 <li class="nav-item active">
