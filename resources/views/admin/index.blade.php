@@ -13,13 +13,18 @@
     
        <h1>ici crud</h1>
 
-       <div class="container m-5">
+       <div class="container align-item-center">
     <h1 class="text-center my-5">Articles</h1>
+    <div class="d-flex">
+        <a href="{{route('admin.create')}}" class="btn btn-info m-5"> <i class="fas fa-plus"></i> Ajouter un produit</a>
+    </div>
     <table class="table table-hover">
   <thead>
     <tr class="table-active">
       <th scope="col">ID</th>
-      <th scope="col">Titre</th>
+      <th scope="col">nom</th>
+      <th scope="col">prix</th>
+      <th scope="col">état</th>
       <th scope="col">Crée le </th>
       <th scope="col">Action</th>
     </tr>
@@ -29,6 +34,8 @@
       <tr class="">
          <th>{{$product->id}}</th>
          <td>{{$product->title}}</td>
+         <td>{{$product->getFrenchPrice()}}</td>
+         <td>{{$product->state}}</td>
          <!--<td>{{$product->created_at}}</td>- aficher date en detail -->
          <td>{{date('d-m-y' , strtotime($product->created_at)) }}</td>
          <td class="d-flex">

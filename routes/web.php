@@ -22,6 +22,7 @@ Route::get('/', function () {
 Route::get('/', [MainController::class , 'index'])->name('home');
 Route::get('/products', [MainController::class , 'index'])->name('products');
 Route::get('/admin', [ProductsController::class , 'index'])->middleware('admin')->name('admin');
+Route::get('/admin/create', [ProductsController::class , 'create'])->middleware('admin')->name('admin.create');
 
 
 
