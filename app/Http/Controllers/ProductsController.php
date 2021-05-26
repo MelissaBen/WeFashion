@@ -87,16 +87,7 @@ class ProductsController extends Controller
     
     {
        $product->delete();
-       return redirect()->route('admin')->with('success' , "l'article a bien été supprimé");
+       return redirect()->route('admin')->with("success" , "l'article a bien été supprimé");
     }
 
-    
-
-    /*
-    public function delete(Product $product) {
-         
-        $product->delete();
-       return redirect()->route('admin')->with('success' , "l'article a bien été supprimé");
-    }
-    */
 }
