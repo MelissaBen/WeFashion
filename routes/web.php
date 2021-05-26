@@ -21,7 +21,7 @@ Route::get('/', function () {
 });*/
 Route::get('/', [MainController::class , 'index'])->name('home');
 Route::get('/products', [MainController::class , 'index'])->name('products');
-Route::get('/admin', [ProductsController::class , 'index'])->middleware('admin')->name('products.index');
+Route::get('/admin', [ProductsController::class , 'index'])->middleware('admin')->name('admin');
 
 
 

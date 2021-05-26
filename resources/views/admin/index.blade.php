@@ -11,7 +11,9 @@
     @extends('base')
     @section('content')
        
-       <h1>ici test produit</h1>
+       <h1>ici crud</h1>
+    @endsection
+
    
 </body>
 </html>
