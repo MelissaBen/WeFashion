@@ -39,7 +39,7 @@
          <!--<td>{{$product->created_at}}</td>- aficher date en detail -->
          <td>{{date('d-m-y' , strtotime($product->created_at)) }}</td>
          <td class="d-flex">
-             <a href="" class="btn btn-warning mx-3"><i class="fas fa-edit"></i></a>
+             <a href="{{route{'admin.article.edit'}}}" class="btn btn-warning mx-3"><i class="fas fa-edit"></i></a>
              <a href="" class="btn btn-danger mx-3"><i class="fas fa-trash-alt"></i></a>
          </td>
       </tr>

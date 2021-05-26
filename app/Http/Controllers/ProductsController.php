@@ -60,7 +60,9 @@ class ProductsController extends Controller
      */
     public function edit($id)
     {
-        //
+        return view('admin.produdts.edit' , [
+            'product'=> $product
+        ])
     }
 
     /**
