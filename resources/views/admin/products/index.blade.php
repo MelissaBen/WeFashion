@@ -40,7 +40,12 @@
          <td>{{date('d-m-y' , strtotime($product->created_at)) }}</td>
          <td class="d-flex">
              <a href="" class="btn btn-warning mx-3"><i class="fas fa-edit"></i></a>
-             <a href="" class="btn btn-danger mx-3"><i class="fas fa-trash-alt"></i></a>
+             <form action={{route('admin.product.destroy',$product->id )}} method="POST">
+              @csrf
+              @method("DELETE")
+                <button type="submit" class="btn btn-danger mx-3"><i class="fas fa-trash-alt"></i>
+                </button>
+             </form>
          </td>
       </tr>
       @endforeach
