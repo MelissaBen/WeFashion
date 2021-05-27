@@ -29,4 +29,11 @@ class MainController extends Controller
           ]);
        
     }
+    public function show($slug) {
+
+       $product = Product::where('slug' , $slug)->firstOrFail();
+       return view('product' , [
+           'product' => $product 
+       ]);
+    }
 }

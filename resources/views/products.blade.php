@@ -26,7 +26,7 @@
                            <h5 class="card-title">{{$product->title}}</h5>
                            <p class="card-text">{{$product->getFrenchPrice()}}</p>
                            <img src={{$product->image}} alt="">
-                           <a href="{{route('products' , $product->slug)}}" class="btn btn-primary"> lire la suite <i class="fas fa-arrow-right"></i> </a>
+                           <a href="{{route('product' , $product->slug)}}" class="btn btn-primary"> lire la suite <i class="fas fa-arrow-right"></i> </a>
                        </div>
                    </div>
                  </div>
