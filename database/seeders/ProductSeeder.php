@@ -24,7 +24,7 @@ class ProductSeeder extends Seeder
             Product::create (
                 [
                     'title' => $faker->sentence() ,
-                    'slug' => $faker->slug ,
+                    //'slug' => $faker->slug ,
                     'description' => $faker->text(),
                     'price'=> $faker->numberBetween(15,300)*100,
                     'size' => $faker->randomElement(['XS','S','M','L','XL']),
