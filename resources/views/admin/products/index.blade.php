@@ -24,8 +24,8 @@
       <th scope="col">ID</th>
       <th scope="col">nom</th>
       <th scope="col">prix</th>
+      <th scope="col">catégorie</th>
       <th scope="col">état</th>
-      <th scope="col">Crée le </th>
       <th scope="col">Action</th>
     </tr>
   </thead>
@@ -35,9 +35,10 @@
          <th>{{$product->id}}</th>
          <td>{{$product->title}}</td>
          <td>{{$product->getFrenchPrice()}}</td>
+         @foreach ($product->categories as $category)
+          <td> {{ $category->name }}</td>
+          @endforeach 
          <td>{{$product->state}}</td>
-         <!--<td>{{$product->created_at}}</td>- aficher date en detail -->
-         <td>{{date('d-m-y' , strtotime($product->created_at)) }}</td>
          <td class="d-flex">
              <a href="" class="btn btn-warning mx-3"><i class="fas fa-edit"></i></a>
              <form action={{route('admin.product.destroy',$product->id )}} method="POST">
