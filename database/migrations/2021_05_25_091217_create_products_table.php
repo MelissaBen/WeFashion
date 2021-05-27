@@ -27,7 +27,7 @@ class CreateProductsTable extends Migration
                 'L',
                 'XL',
             ])->default('M');
-            $table->enum('state', [
+            $table->enum('discount', [
                 'en solde',
                 'Standard',
             ])->default('en solde');

@@ -9,6 +9,14 @@ class Product extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'title',
+        'description',
+        'price',
+        'refrence',
+        'discount',
+        'image',
+    ];
     public function getFrenchPrice() {
 
         $price = $this-> price / 100 ; 

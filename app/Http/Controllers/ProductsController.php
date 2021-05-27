@@ -27,7 +27,10 @@ class ProductsController extends Controller
      */
     public function create()
     {
-        return view('admin.products.create');
+            $products = Product::all() ;
+        return view('admin.products.create' , [
+            'products' => $products 
+        ]);
     }
 
     /**
@@ -38,7 +41,16 @@ class ProductsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Product::create([
+            'title'->$request->input('title'),
+            'description'->$request->input('description'),
+            'price'->$request->input('price'),
+            'reference'->$request->input('reference'),
+            'discount'->$request->input('discount'),
+            'image'->$request->input('image'),
+        ]);
+
+        return redirect()->route('products');
     }
 
     /**
