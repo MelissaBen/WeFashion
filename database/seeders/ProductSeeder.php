@@ -28,9 +28,9 @@ class ProductSeeder extends Seeder
                     'description' => $faker->text(),
                     'price'=> $faker->numberBetween(15,300)*100,
                     'size' => $faker->randomElement(['XS','S','M','L','XL']),
+                    'state' => $faker->randomElement(['en solde','Standard']),
                     'image' => 'https://placeimg.com/200/200/any?' . rand(1, 100),
                     'published'=>$faker->boolean(),
-                    'state'=>$faker->boolean(),
                     'reference'=>$faker->numberBetween(1,16),
                      //'reference'=>$faker->sentence(),
                 ])->categories()->attach([

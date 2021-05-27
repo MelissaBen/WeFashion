@@ -27,9 +27,12 @@ class CreateProductsTable extends Migration
                 'L',
                 'XL',
             ])->default('M');
+            $table->enum('state', [
+                'en solde',
+                'Standard',
+            ])->default('en solde');
             $table->string('image');
             $table->boolean('published')->default(false);
-            $table->boolean('state')->default(false);
             $table->string('reference', 16);
             //$table->unsignedInteger('category_id');*/
             $table->timestamps();
