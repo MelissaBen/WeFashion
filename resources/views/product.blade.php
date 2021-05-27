@@ -18,8 +18,11 @@
             </small>
           <h2 class="display-4 text-center"> {{$product->title}} </h2>
            <img src={{$product->image}} alt="">
+           <p>{{$product->description}}</p>
            <h5 class="text-center my-3 pt-3">{{$product->getFrenchPrice()}}</h5>
-          <div class="d-flex justify-content-center my-5">
+                         <button class="btn btn-primary m-5">acheter</button>
+
+          <div class="d-flex justify-content-center px-5">
               <a href="{{route('products')}}" class="btn btn-primary">
                 retour
               </a>
