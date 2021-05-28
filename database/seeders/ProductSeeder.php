@@ -23,7 +23,7 @@ class ProductSeeder extends Seeder
         for( $i = 0 ; $i < 80 ; $i++) {
             Product::create (
                 [
-                    'title' => $faker->sentence() ,
+                    'title' => $faker->name() ,
                     //'slug' => $faker->slug ,
                     'description' => $faker->text(),
                     'price'=> $faker->numberBetween(15,300)*100,
