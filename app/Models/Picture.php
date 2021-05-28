@@ -5,20 +5,19 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Category extends Model
+class Picture extends Model
 {
     use HasFactory;
 
-      public function products() {
+       public function products() {
 
         return $this->belongsToMany('App\models\Product');
 
       }
 
-      public function picture() {
+      public function categories() {
 
-        return $this->belongsToMany('App\Models\Picture');
+        return $this->belongsToMany('App\Models\Category');
        
       }
-
 }

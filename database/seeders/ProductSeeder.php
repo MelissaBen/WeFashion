@@ -34,7 +34,7 @@ class ProductSeeder extends Seeder
                     'reference'=>$faker->numberBetween(1,16),
                      //'reference'=>$faker->sentence(),
                 ])->categories()->attach([
-                rand(1, 2),]);
+                rand(1, 2),])->picture();
         } 
     }
 }
