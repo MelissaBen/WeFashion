@@ -33,7 +33,7 @@ class MainController extends Controller
 
        $product = Product::where('slug' , $slug)->firstOrFail();
        return view('product' , [
-           'product' => $product 
+           'product' => $product ,
        ]);
     }
 }

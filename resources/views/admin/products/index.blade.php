@@ -38,7 +38,7 @@
          @foreach ($product->categories as $category)
           <td> {{ $category->name }}</td>
           @endforeach 
-         <td>{{$product->state}}</td>
+         <td>{{$product->discount}}</td>
          <td class="d-flex">
              <a href="" class="btn btn-warning mx-3"><i class="fas fa-edit"></i></a>
              <form action={{route('admin.product.destroy',$product->id )}} method="POST">

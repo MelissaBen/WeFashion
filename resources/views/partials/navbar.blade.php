@@ -30,7 +30,7 @@
                   @if (Auth::user())
                   @if ( Auth::user()->role === 'ADMIN')
                   <li class="nav-item">
-                      <a class="nav-link " aria-current="page" href={{route('admin')}}>Espace admin</a>
+                      <a class="nav-link " aria-current="page" href={{route('admin')}}><i class="fas fa-user"></i> Espace admin</a>
                   </li>  
                   @endif
                       <li class="nav-item">
