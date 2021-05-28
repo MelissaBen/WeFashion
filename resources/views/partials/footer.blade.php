@@ -8,7 +8,7 @@
 </head>
 <body>
    <!-- Footer -->
-<footer class="text-center text-lg-start bg-light text-muted">
+<footer class="py-2 text-center text-lg-start bg-light text-muted">
   <!-- Section: Social media -->
   <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
  
@@ -24,7 +24,7 @@
         <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
           <!-- Content -->
           <h6 class="text-uppercase fw-bold mb-4">
-            <i class="fas fa-gem me-3"></i>Informations
+            <i class="far fa-question-circle me-3"></i></i>Informations
           </h6>
            <p>
             <a href="#!" class="text-reset">Mention légales</a>
@@ -43,6 +43,7 @@
         <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
           <!-- Links -->
           <h6 class="text-uppercase fw-bold mb-4">
+            <i class="fas fa-headset me-3"></i>
             SERVICE CLIENT
           </h6>
           <p>
@@ -91,7 +92,7 @@
     <a class="text-reset fw-bold" href="https://mdbootstrap.com/">WeFashion</a>
   </div>
   <!-- Copyright -->
-</footer>         
+</footer>    
 
 </body>
 </html>

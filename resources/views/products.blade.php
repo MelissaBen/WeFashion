@@ -9,8 +9,7 @@
 <body>
     @extends('base')
     @section('content')
-
-      <div class="row m-5">
+      <div class="row m-5 ">
           <!--title-->
         <h1 class="display-3 text-center m-5"> products </h1>
           @foreach ($products as $product)
@@ -31,7 +30,7 @@
                              {{ Str::limit($product->description, 100, $end='...') }}
                           </div>
                           <p>
-                            <small>{{ucfirst('prix :')}}</small>
+                            <small style="color:green">{{ucfirst('prix :')}}</small>
                             <small>{{$product->getFrenchPrice()}}</small> 
                           </p>
                          <a href="{{route('product' , $product->slug)}}" class="btn btn-primary "> acheter l'article <i class="fas fa-arrow-right"></i> </a>    
@@ -42,8 +41,8 @@
           <div class="d-flex justify-content-center mt-5">
               {{$products->appends(request()->input())->links('vendor.pagination.custom')}}
             </div> 
-      </div>
-      
+      </div>  
     @endsection
+
 </body>
 </html>

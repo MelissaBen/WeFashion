@@ -10,7 +10,7 @@
 <body>
     @extends('base')
     @section('content')
-       <div class="container">
+       <section class="container " style="margin-bottom: 10%">
       
             <h1>ici ajouter un produit</h1>
             <form method="POST" action="{{route('products.store')}}">
@@ -60,7 +60,7 @@
                 <button type="submit" class="btn btn-primary">Submit</button>
 
             </form>
-       </div>
+          </section>
     @endsection 
 </body>
 </html>

@@ -9,15 +9,15 @@
 <body>
     @extends('base')
     @section('content')
-      <section class="container align-self-cente ">
+      <section class="container m-5 align-self-cente ">
         <div class="row mt-5 m-auto text-center">
           <!--image-->
-          <div class="col-md-4  offset-md-2"> 
-            <img src={{$product->image}}  alt="">
+          <div class="card col-md-4  offset-md-2" style="width: 18rem;"> 
+            <img src={{$product->image}}  alt="" class="img-fluid img-thumbnail m-auto">
           </div>
           <!--info-->
-          <div class="col-md-4 offset-md-1 text-left">
-              <h3>{{strtoupper($product->title)}}</h3>
+          <div class=" card-body col-md-4 offset-md-1 text-left">
+              <h3 class="m-4">{{strtoupper($product->title)}}</h3>
               <ul class="list-group product-info">
                   <li class="list-group-item text-danger ">
                   @foreach ($product->categories as $category)
@@ -37,10 +37,11 @@
               </ul>
           </div>
         </div>
-        <div class="d-flex justify-content-center mb-5 "> 
+    
+      </section>
+         <div class="d-flex justify-content-center  m-5 "> 
           <a href="{{route('products')}}" class="btn btn-primary">retour à la boutique </a>
         </div>
-      </section>
     @endsection
 </body>
 </html>
