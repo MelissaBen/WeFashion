@@ -12,7 +12,7 @@
     @section('content')
        <section class="container card my-5" >
       
-            <h2 class="text-center mt-5"> Ajouter un produit</h2>
+            <h2 class="text-center mt-5"> Ajouter un article</h2>
             <form method="post" action="{{route('products.store')}}">
               @method('POST')
               @csrf
@@ -75,7 +75,7 @@
                  </div>
  
 
-                <button type="submit" class="btn btn-primary">Envoyer</button>
+                <button type="submit" class="btn btn-primary m-5">Envoyer</button>
 
             </form>
           </section>

@@ -9,8 +9,8 @@
 <body>
     @extends('base')
     @section('content')
-      <section class="container m-5 align-self-cente ">
-        <div class="row mt-5 m-auto text-center">
+      <section class="container align-self-cente ">
+        <div class="row my-5 m-auto text-center">
           <!--image-->
           <div class="card col-md-4  offset-md-2" style="width: 18rem;"> 
             <img src={{$product->image}}  alt="" class="img-fluid img-thumbnail m-auto">

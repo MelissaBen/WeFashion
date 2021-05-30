@@ -14,7 +14,7 @@
     <div class="container align-item-center">
        <h1 class="text-center my-5">Articles</h1>
        <div class="d-flex">
-          <a href="{{route('admin.create')}}" class="btn btn-info m-5"> <i class="fas fa-plus"></i> Ajouter un produit</a>
+          <a href="{{route('admin.create')}}" class="btn btn-info m-5"> <i class="fas fa-plus"></i> Ajouter un article</a>
        </div>
         <table class="table table-hover">
             <thead>
