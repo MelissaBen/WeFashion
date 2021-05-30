@@ -15,7 +15,7 @@ class CreateProductsTable extends Migration
     {
         Schema::create('products', function (Blueprint $table) {
             $table->id();
-            $table->string('title' , 100);
+            $table->string('title');
             $table->string('slug')->nullable();
             $table->text('description')->nullable();
           //$table->unsignedDecimal('price', 6, 2);
@@ -27,11 +27,12 @@ class CreateProductsTable extends Migration
                 'L',
                 'XL',
             ])->default('M');
-            $table->enum('discount', [
+           /* $table->enum('discount', [
                 'en solde',
                 'Standard',
-            ])->default('en solde');
-            $table->string('image');
+            ])->default('en solde');*/
+             $table->string('discount');
+            $table->mediumText('image')->default(false);
             $table->boolean('published')->default(false);
             $table->string('reference', 16);
             //$table->unsignedInteger('category_id');*/

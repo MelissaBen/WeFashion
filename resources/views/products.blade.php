@@ -36,8 +36,15 @@
                          <a href="{{route('product' , $product->slug)}}" class="btn btn-primary "> acheter l'article <i class="fas fa-arrow-right"></i> </a>    
                       </div>
                   </div>
-              </div>
+              </div>  
           @endforeach
+          @if(Request::url() === 'http://localhost/public/Soldes')
+
+        <h4  class="d-flex justify-content-between align-items-center mb-3">
+          <span class="text-muted" >Stock Product : Solde</span>
+          <span class="badge badge-secondary badge-pill" >{{$countSolde}} {{'resultats'}}</span>
+        </h4>
+        @endif
           <div class="d-flex justify-content-center mt-5">
               {{$products->appends(request()->input())->links('vendor.pagination.custom')}}
             </div> 
