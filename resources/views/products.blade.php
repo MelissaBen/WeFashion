@@ -11,7 +11,7 @@
     @section('content')
       <div class="row m-5 ">
           <!--title-->
-        <h1 class="display-3 text-center m-5"> products </h1>
+        <h1 class="display-3 text-center m-5"> Les articles </h1>
           @foreach ($products as $product)
           <!--product-->
               <div class="col-md-4 mb-2">

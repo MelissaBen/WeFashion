@@ -18,7 +18,6 @@ class CreateProductsTable extends Migration
             $table->string('title');
             $table->string('slug')->nullable();
             $table->text('description')->nullable();
-          //$table->unsignedDecimal('price', 6, 2);
             $table->integer('price');
             $table->enum('size' , [
                 'XS',
@@ -27,15 +26,10 @@ class CreateProductsTable extends Migration
                 'L',
                 'XL',
             ])->default('M');
-           /* $table->enum('discount', [
-                'en solde',
-                'Standard',
-            ])->default('en solde');*/
-             $table->string('discount');
+            $table->string('discount');
             $table->mediumText('image')->default(false);
             $table->boolean('published')->default(false);
             $table->string('reference', 16);
-            //$table->unsignedInteger('category_id');*/
             $table->timestamps();
         });
     }

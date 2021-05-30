@@ -50,22 +50,16 @@ class ProductsController extends Controller
      */
     public function store(Request $request)
     {
-      /*  Product::create([
-            'title'->$request->input('title'),
-            'description'->$request->input('description'),
-            'price'->$request->input('price'),
-            'reference'->$request->input('reference'),
-            'discount'->$request->input('discount'),
-            'image'->$request->input('image'),
-        ]);*/
+    
 
     $addProduct= new Product;
-         //recover data entered by user
+
     $addProduct->title=$request->input('title');
     $addProduct->description=$request->input('description');
     $addProduct->price=$request->input('price');
     $addProduct->size=$request->input('size');
     $addProduct->reference=$request->input('reference');
+    $addProduct->discount=$request->input('categorie');
     $addProduct->discount=$request->input('discount');
 
    if($request->hasfile('image')){
@@ -80,11 +74,7 @@ class ProductsController extends Controller
 
       $addProduct->image=$filename;
     }
-       /*i if(!empty($request->file('image'))){
-            $extension = $request->file('image')->extension();
-            $product->image = $product->name . '.' . $extension;
-            $request->file('image')->storeAs('public/images/', $product->name . '.' . $extension);
-        }*/
+     
 
     $addProduct->save();
         return redirect()->route('products');

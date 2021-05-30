@@ -1,7 +1,7 @@
 @extends('base')
 
 @section('content')
-<div class="container m-5">
+<div class="container ">
      <h1 class="text-center my-5"> Page de connexion</h1>
     <div class="row justify-content-center m-5">
         <div class="col-md-8">

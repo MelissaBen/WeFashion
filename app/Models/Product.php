@@ -16,6 +16,7 @@ class Product extends Model
         'refrence',
         'discount',
         'image',
+        'categorie',
     ];
     public function getFrenchPrice() {
 
