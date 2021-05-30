@@ -13,19 +13,20 @@
        <section class="container card my-5" >
       
             <h2 class="text-center mt-5"> Ajouter un produit</h2>
-            <form method="POST" action="{{route('products.store')}}">
+            <form method="post" action="{{route('products.store')}}">
+              @method('POST')
               @csrf
               <div class="col-12 m-5">
                 <div class="form-group m-5 ">
                   <label for="">nom</label>
                   <input type="text" name='title' class="form-control" placeholder="nom du produit">
                 </div>
-
+<!--
                 <div class="form-group m-5 ">
                   <label for="">Catégorie</label>
                   <input type="text" name='title' class="form-control" placeholder="nom de la catégorie">
                   
-                </div>
+                </div>-->
                 
 
                 <div class="form-group m-5">
@@ -39,13 +40,28 @@
                     <input type="number" class="form-control" id="price" name="price" step="0.01" min="0.01" max="9999.99" value="" placeholder="prix" required>
                 </div>
 
+                 <div class=" form-group m-5custom-file">
+                  <label for="image">Image</label>
+                  <input type="file" class="custom-file-input" id='image' name="image" placeholder="image">
+                  <label class="custom-file-label">choose file</label>
+                 </div>
+ 
                 <div class="form-group m-5">
                   <label for="reference">Référence</label>
                   <input type="text" minlength="16" maxlength="16" class="form-control" id="reference" name="reference" value="" placeholder="référence" required>
                 </div>
-
-            
               
+                       <div class="form-group">
+                    <select id="size" name='size'>
+                    <option value="XS">XS</option>
+                    <option value="S" selected>S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                    <option value="XL">XL</option>
+                   </select>
+                </div>
+               
+              <!--
                 <div class="form-group m-5">
                     <label>En solde</label> <br>
                     <div class="form-check form-check-inline m-2">
@@ -56,12 +72,21 @@
                         <input class="form-check-input" type="radio" id="discount1" name="discount" value="0"  checked>
                         <label class="form-check-label" for="discount1">Non</label>
                     </div>
-                </div>
+                </div>-->
 
+                  <div class="form-group m-5">
+                    <label for="discount">Etat</label>
+
+                    <select id="discount" name="discount">
+                    <option value="standard" selected>Standard</option>
+                    <option value="solde">solde</option>
+                   </select>
+                </div>
+<!--
                 <div class="form-group m-5">
                     <label for="picture">Photo</label>
                     <input type="text" class="form-control-file" name="image" id="picture">
-                </div>
+                </div>-->
 
                 
 

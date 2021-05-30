@@ -22,6 +22,7 @@ Route::get('/', function () {
 Route::get('/', [MainController::class , 'index'])->name('home');
 Route::get('/products', [MainController::class , 'index'])->name('products');
 Route::get('/product/{slug}', [MainController::class , 'show'])->name('product');
+Route::get('/soldes', [ProductsController::class, 'ShowProductSolde'])->name('Soldes');
 Route::get('/admin', [ProductsController::class , 'index'])->middleware('admin')->name('admin');
 Route::get('/admin/create', [ProductsController::class , 'create'])->middleware('admin')->name('admin.create');
 Route::post('/admin/products/store', [ProductsController::class , 'store'])->middleware('admin')->name('products.store');
