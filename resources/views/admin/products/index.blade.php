@@ -42,8 +42,13 @@
                       <form action={{route('admin.product.destroy',$product->id )}} method="POST">
                         @csrf
                         @method("DELETE")
-                          <button type="submit" class="btn btn-danger mx-3"><i class="fas fa-trash-alt"></i>
+                          <button type="submit" onclick="deleted()" class="btn btn-danger mx-3"><i class="fas fa-trash-alt"></i>
                             </button>
+                            <script>
+                              function deleted() {
+                                alert("vous etes sur de vouloir supprimé?")
+                              }
+                            </script>
                         </form>
                     </td>
                   </tr>
